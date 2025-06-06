@@ -1,3 +1,8 @@
 from django.shortcuts import render
+from rest_framework import generics
+from .models import RoadSegment
+from .serializers import RoadSegmentSerializer
 
-# Create your views here.
+class RoadSegmentList(generics.ListCreateAPIView):
+    queryset = RoadSegment.objects.all()
+    serializer_class = RoadSegmentSerializer
