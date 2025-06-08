@@ -9,7 +9,7 @@ class RoadSegment(models.Model):
         return self.name
 
 class TrafficReading(models.Model):
-    Road_Segment = models.ForeignKey(RoadSegment, on_delete=models.CASCADE, related_name='readings')
+    road_segment = models.ForeignKey(RoadSegment, on_delete=models.CASCADE, related_name='readings')
     average_speed = models.FloatField()
     timestamp = models.DateTimeField(auto_now_add=True)
 

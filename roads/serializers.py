@@ -7,6 +7,8 @@ class RoadSegmentSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class TrafficReadingSerializer(serializers.ModelSerializer):
+    intensity = serializers.SerializerMethodField()
+
     class Meta:
         model = TrafficReading
         fields = '__all__'
