@@ -11,13 +11,4 @@ class RoadSegmentList(generics.ListCreateAPIView):
 class TrafficReadingListCreate(generics.ListCreateAPIView):
     queryset = TrafficReading.objects.all()
     serializer_class = TrafficReadingSerializer
-
-class RoadSegmentListCreate(generics.ListCreateAPIView):
-    queryset = RoadSegment.objects.all()
-    serializer_class = RoadSegmentSerializer
-    permission_classes = [IsAdminOrReadOnly]
-
-class TrafficReadingListCreate(generics.ListCreateAPIView):
-    queryset = TrafficReading.objects.all()
-    serializer_class = TrafficReadingSerializer
     permission_classes = [IsAdminOrReadOnly]
