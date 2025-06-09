@@ -2,7 +2,7 @@
 
 API REST desenvolvida com Django e Django REST Framework para monitorização de tráfego rodoviário em segmentos de estrada locais.
 
-## 🚦 Funcionalidades
+## Funcionalidades
 
 - CRUD completo para segmentos de estrada (`RoadSegment`)
 - CRUD completo para leituras de velocidade média (`TrafficReading`)
@@ -14,7 +14,7 @@ API REST desenvolvida com Django e Django REST Framework para monitorização de
 - Interface de administração via Django Admin
 - Documentação interativa da API em `/api/docs`
 
-## 🚀 Como executar o projeto
+## Como executar o projeto
 
 ### Pré-requisitos
 
