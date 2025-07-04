@@ -1,54 +1,69 @@
 # Traffic Monitor API
 
-API REST desenvolvida com Django e Django REST Framework para monitorização de tráfego rodoviário em segmentos de estrada locais.
+A REST API built with Django and Django REST Framework for monitoring road traffic on local road segments.
 
-## Funcionalidades
+## Features
 
-- CRUD completo para segmentos de estrada (`RoadSegment`)
-- CRUD completo para leituras de velocidade média (`TrafficReading`)
-- Cálculo dinâmico da **intensidade de tráfego** com base na velocidade
-- Contagem do total de leituras por segmento
-- Permissões por tipo de utilizador:
-  - **Admin**: pode criar, editar e apagar
-  - **Anônimo**: apenas leitura
-- Interface de administração via Django Admin
-- Documentação interativa da API em `/api/docs`
+- Full CRUD for road segments (`RoadSegment`)
+- Full CRUD for average speed readings (`TrafficReading`)
+- Dynamic traffic intensity calculation based on speed
+- Total readings count per segment
+- User-based permissions:
+  - **Admin**: can create, edit, and delete
+  - **Anonymous**: read-only access
+- Admin interface via Django Admin
+- Interactive API documentation at `/api/docs`
 
-## Como executar o projeto
+## How to Run the Project
 
-### Pré-requisitos
+### Prerequisites
 
-- Python 3.12 ou superior
+- Python 3.12 or higher
 - pip
 
-### Instalação
+### Installation
 
-# 1. Clone o repositório
-git clone https://github.com/pedro-alvesjr/traffic_monitor
-cd traffic_monitor
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/pedro-alvesjr/traffic_monitor
+   cd traffic_monitor
+   ```
 
-# 2. (Opcional) Crie e ative um ambiente virtual
-python -m venv venv
-venv\Scripts\activate  # No Windows
-# ou
-source venv/bin/activate  # No Linux/macOS
+2. *(Optional)* Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   venv\Scripts\activate  # On Windows
+   ```
 
-# 3. Instale as dependências
-pip install -r requirements.txt
+   or
 
-# 4. Aplique as migrações
-python manage.py migrate
+   ```bash
+   source venv/bin/activate  # On Linux/macOS
+   ```
 
-# 5. Crie um superusuário
-python manage.py createsuperuser
+3. Install the dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-# 6. Inicie o servidor de desenvolvimento
-python manage.py runserver
-```
+4. Apply the migrations:
+   ```bash
+   python manage.py migrate
+   ```
 
-### Acessos úteis:
+5. Create a superuser:
+   ```bash
+   python manage.py createsuperuser
+   ```
 
-- API (segmentos): [`/api/roadsegments/`]
-- API (leituras): [`/api/readings/`]
-- Documentação Swagger: [`/api/docs/`]
+6. Start the development server:
+   ```bash
+   python manage.py runserver
+   ```
+
+### Useful Endpoints:
+
+- API (road segments): [`/api/roadsegments/`]
+- API (readings): [`/api/readings/`]
+- Swagger Documentation: [`/api/docs/`]
 - Django Admin: [`/admin/`]
